@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Різновиди селекторів</title>
+    <link rel="stylesheet" type="text/css" href="../style/style.css">
+</head>
+<body>
+
+    <!-- 1. Глобальний селектор -->
+    <h1>Глобальний селектор *</h1>
+
+    <!-- 2. Селектор дочірніх елементів -->
+    <ul>
+        <li><a href="#">Посилання в списку</a></li>
+        <li><a href="#">Ще одне посилання</a></li>
+    </ul>
+
+    <!-- 3. Селектор сусіднього елемента -->
+    <ul>
+        <li>Список</li>
+    </ul>
+    <p>Цей абзац зміниться, бо він перший після ul.</p>
+    <p>Цей абзац не зміниться.</p>
+
+    <!-- 4. Селектор загального сусіда -->
+    <ul>
+        <li>Список</li>
+    </ul>
+    <p>Цей абзац теж зміниться, бо йде після ul.</p>
+    <p>І цей зміниться.</p>
+
+    <!-- 5. Атрибутний селектор -->
+    <a href="http://example.com" title="Зовнішнє посилання">Зовнішнє посилання</a>
+
+    <!-- 6. Атрибутний селектор із частковим збігом -->
+    <a href="https://everstudent.ua">Посилання на everstudent.ua</a>
+
+    <!-- 7. Псевдоклас :hover -->
+    <div class="hover-box">Наведіть на мене</div>
+
+    <!-- 8. Псевдоелемент :after -->
+    <div class="clearfix">Блок з clearfix</div>
+
+</body>
+</html>
