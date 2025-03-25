@@ -62,11 +62,6 @@ article:hover {
 .content-box:hover {
     background: #ffe4e1;
 }
-.quote::before, .quote::after {
-    content: '\\201C';
-    quotes: '\\201C' '\\201D';
-    color: red;
-}
 footer {
     text-align: center;
     padding: 20px;
