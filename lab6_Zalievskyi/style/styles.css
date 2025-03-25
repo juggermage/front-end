@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+header {
+    text-align: center;
+    padding: 20px;
+    background: radial-gradient(circle, #ff4e50, #fc913a);
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background 0.5s ease-in-out;
+}
+header:hover {
+    background: radial-gradient(circle, #fc913a, #ff4e50);
+}
+nav {
+    background: #ff4e50;
+    padding: 10px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+nav a:hover {
+    color: #ffd700;
+}
+article {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 15px;
+    border: 10px solid;
+    border-image-source: url('berry-border.png');
+    border-image-slice: 30;
+    border-image-width: 20px;
+    border-image-repeat: round;
+    outline: 3px dashed #ff4e50;
+    text-align: center;
+    transform-origin: center;
+    transition: transform 0.5s ease-in-out;
+}
+article:hover {
+    transform: matrix(1, 0.2, 0, 1, 0, 0) skewY(-10deg) scale(1.05);
+}
+.content-box {
+    resize: both;
+    overflow: auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    caret-color: red;
+    transition: background 0.4s ease-in-out;
+}
+.content-box:hover {
+    background: #ffe4e1;
+}
+.quote::before, .quote::after {
+    content: '\\201C';
+    quotes: '\\201C' '\\201D';
+    color: red;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #ff4e50;
+    color: white;
+    margin-top: 20px;
+}
+#contacts {
+    text-align: center;
+}
+.berry-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+.berry-img:hover {
+    transform: skewY(5deg) scale(1.0) translate3d(20px, 10px, 50px); /* 3D переміщення */
+}
+.article-img {
+    transition: transform 0.4s ease-in-out;
+}
+.article-img:hover {
+    transform: scale(1.1) rotate(10deg);
+}
+.content-box-3d {
+    transform: translate3d(0px, 0px, 100px);
+    transition: transform 0.5s ease-in-out;
+}
+.content-box-3d:hover {
+    transform: translate3d(20px, 30px, 200px);
+}
