@@ -1,0 +1,125 @@
+/* Базові стилі */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "sidebar header"
+      "sidebar content"
+      "sidebar footer";
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 70px 1fr 70px;
+    height: 100vh;
+  }
+  
+  header, .sidebar, main, footer {
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .header {
+    grid-area: header;
+    background-color: #007bff;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebar {
+    grid-area: sidebar;
+    background-color: gold;
+    font-weight: bold;
+    overflow-y: auto;
+  }
+  
+  .content {
+    grid-area: content;
+    background-color: #f9f9f9;
+    overflow-y: auto;
+    height: 100%;
+  }
+  
+  .footer {
+    grid-area: footer;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* ===== 🖥 ПК (Desktop) — min-width 1024px ===== */
+  @media (min-width: 1024px) {
+    .grid-container {
+      grid-template-areas:
+        "sidebar header"
+        "sidebar content"
+        "sidebar footer";
+      grid-template-columns: 150px 1fr;
+      grid-template-rows: 70px 1fr 70px;
+    }
+  
+    .header {
+      font-size: 24px;
+    }
+  
+    .sidebar {
+      font-size: 18px;
+    }
+  }
+  
+  /* ===== 📱 Смартфон — max-width 768px ===== */
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-areas:
+        "header"
+        "content"
+        "sidebar"
+        "footer";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr auto auto;
+      height: auto;
+    }
+  
+    .sidebar {
+      background-color: #ffcc00;
+      font-size: 16px;
+    }
+  
+    .header {
+      text-align: center;
+    }
+  }
+  
+  /* ===== 🖨 Для друку ===== */
+  @media print {
+    body {
+      font-size: 12pt;
+      color: black;
+    }
+  
+    .grid-container {
+      display: block;
+    }
+  
+    .sidebar,
+    .footer {
+      display: none;
+    }
+  
+    .header {
+      background-color: transparent;
+      color: black;
+      font-weight: bold;
+      border-bottom: 1px solid black;
+    }
+  
+    .content {
+      overflow: visible;
+    }
+  }
+  
