@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body, html {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .left {
+    background-color: gold;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .top, .bottom {
+    background-color: dodgerblue;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .top {
+    flex-shrink: 0;
+  }
+
+  .bottom {
+    flex-shrink: 0;
+  }
+
+  .content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: white;
+    height: calc(100vh - 120px);
+  }
+
+  .attr-demo::after {
+    content: attr(data-info);
+    display: block;
+    margin-top: 10px;
+    color: darkgreen;
+    font-style: italic;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+
+    .left {
+      writing-mode: horizontal-tb;
+      width: 100%;
+      height: 50px;
+    }
+
+    .main {
+      flex: none;
+      height: calc(100vh - 150px);
+    }
+  }
+
+  @media print {
+    .left, .top, .bottom {
+      display: none;
+    }
+
+    .content {
+      font-size: 12pt;
+    }
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+
+  @font-face {
+    font-family: 'Tagesschrift';
+    src: url('fonts/Tagesschrift.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Tagesschrift', sans-serif;
+}
+
+h1 {
+  font-family: 'Noto Sans', sans-serif;
+}
