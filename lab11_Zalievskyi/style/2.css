@@ -1,0 +1,31 @@
+.example::before {
+  content: "🔷 Початок: ";
+  color: blue;
+  font-weight: bold;
+}
+
+.example::after {
+  content: " 🔶 Кінець.";
+  color: red;
+  font-weight: bold;
+}
+
+.text::first-letter {
+  font-size: 200%;
+  color: darkgreen;
+  font-weight: bold;
+}
+
+.text::first-line {
+  background-color: #f9f9aa;
+  font-variant: small-caps;
+}
+
+.text {
+  width: 600px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+}

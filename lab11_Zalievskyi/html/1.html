@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Демонстрація елементів веб-форми</title>
+</head>
+<body>
+  <h1>Форма демонстрації елементів</h1>
+
+  <form action="#" method="post" name="demoForm" autocomplete="on" target="_self">
+
+    <fieldset>
+      <legend>Однорядкове текстове поле</legend>
+      <label for="name">Ім’я:</label>
+      <input type="text" id="name" name="name" placeholder="Введіть ім’я" required maxlength="30" size="30" />
+    </fieldset>
+
+    <fieldset>
+      <legend>Багаторядкове текстове поле</legend>
+      <label for="message">Повідомлення:</label><br>
+      <textarea id="message" name="message" rows="4" cols="50" placeholder="Введіть повідомлення тут..."></textarea>
+    </fieldset>
+
+    <fieldset>
+      <legend>Різні типи input</legend>
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required /><br><br>
+
+      <label for="email">Електронна пошта:</label>
+      <input type="email" id="email" name="email" placeholder="example@gmail.com" required /><br><br>
+
+      <label for="volume">Гучність:</label>
+      <input type="range" id="volume" name="volume" min="0" max="100" value="50" step="10" />
+    </fieldset>
+
+    <fieldset>
+      <legend>Оберіть стать</legend>
+      <input type="radio" id="male" name="gender" value="male" checked />
+      <label for="male">Чоловік</label>
+
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">Жінка</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Вибір кольору</legend>
+      <input type="radio" id="red" name="color" value="red" />
+      <label for="red">Червоний</label>
+
+      <input type="radio" id="blue" name="color" value="blue" checked />
+      <label for="blue">Синій</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Оберіть улюблені хобі</legend>
+      <input type="checkbox" id="reading" name="hobby" value="reading" />
+      <label for="reading">Читання</label><br>
+
+      <input type="checkbox" id="sports" name="hobby" value="sports" />
+      <label for="sports">Спорт</label><br>
+
+      <input type="checkbox" id="music" name="hobby" value="music" />
+      <label for="music">Музика</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Оберіть місто</legend>
+      <label for="city">Місто:</label>
+      <select id="city" name="city">
+        <optgroup label="Україна">
+          <option value="kyiv">Київ</option>
+          <option value="lviv">Львів</option>
+        </optgroup>
+        <optgroup label="Європа">
+          <option value="berlin">Берлін</option>
+          <option value="paris">Париж</option>
+        </optgroup>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Оберіть улюблені мови програмування</legend>
+      <select name="languages" id="languages" multiple size="4">
+        <option value="c++">C++</option>
+        <option value="python">Python</option>
+        <option value="java">Java</option>
+        <option value="js">JavaScript</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Кнопки форми</legend>
+      <input type="submit" value="Відправити" />
+      <input type="reset" value="Очистити форму" />
+      <input type="button" value="Click me!" onclick='alert("Oh, you have been clicked me!!!")' />
+    </fieldset>
+
+  </form>
+</body>
+</html>
