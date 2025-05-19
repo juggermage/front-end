@@ -1,0 +1,177 @@
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #000;
+    }
+
+    header {
+      background: #111;
+      color: #fff;
+      padding: 20px;
+      position: relative;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .tagline {
+      font-size: 12px;
+    }
+
+    .search-box {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+
+    .search-box input[type="text"] {
+      padding: 5px;
+    }
+
+    .search-box input[type="submit"] {
+      padding: 5px 10px;
+      background: #000;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .header-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-top: 20px;
+    }
+
+    nav {
+      background: #000;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      background: url("hero.jpg") center/cover no-repeat;
+      height: 300px;
+      color: #fff;
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+    }
+
+    .main {
+      padding: 30px;
+    }
+
+    .main h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .images {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+.images img {
+  width: 350px;
+  height: auto;
+}
+
+
+    .lists {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0;
+    }
+
+    .lists div {
+      flex: 1;
+      margin: 0 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    form {
+      margin: 20px 0;
+    }
+
+    form input[type="text"],
+    form select,
+    form textarea {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0 15px;
+      border: 1px solid #ccc;
+    }
+
+    form input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    form input[type="submit"] {
+      padding: 10px 20px;
+      background: #000;
+      color: #fff;
+      border: none;
+    }
+
+    footer {
+      text-align: left;
+      padding: 20px;
+      background: #eee;
+      font-size: 12px;
+    }
+
+    /* Адаптація для смартфонів */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .images,
+      .lists {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .images img,
+      .lists div {
+        max-width: 90%;
+      }
+
+      .search-box {
+        position: static;
+        margin-top: 10px;
+        text-align: center;
+      }
+    }
